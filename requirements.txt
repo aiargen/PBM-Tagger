@@ -1,3 +1,9 @@
-pandas
-xlrd
 regex
+pandas
+openpyxl
+langchain
+langchain-core
+langchain-openai
+python-dotenv
+pydantic
+
