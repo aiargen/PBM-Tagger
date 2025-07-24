@@ -2,7 +2,7 @@
 
 #6.1 Output Schema
 from typing import List, Optional
-from langchain_core.pydantic_v1 import BaseModel, Field
+from pydantic import BaseModel, Field
 
 #6.2 Prompt Template
 from langchain.prompts import ChatPromptTemplate
