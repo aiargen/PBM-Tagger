@@ -63,6 +63,7 @@ def process_dataframe(df: pd.DataFrame, chain=None, use_llm=True) -> pd.DataFram
         resolution = None
         
         if use_llm:
+            print(f"Calling LLM for case {rec.case_id}...")
             try:
                 resp = chain.invoke({
                     "case_id": rec.case_id,
@@ -70,12 +71,13 @@ def process_dataframe(df: pd.DataFrame, chain=None, use_llm=True) -> pd.DataFram
                     "description": rec.description,
                     "summary": rec.clean_summary,
                 })
-                # resp is PBMClassification object
-                prod = resp.product or prod
-                issue = resp.issue_category or issue
-                action = resp.action_category or action
-                resolution = resp.resolution_comments or resolution
+                # resp is PBMClassification object or dict
+                prod = resp.get("product", prod)
+                issue = resp.get("issue_category", issue)
+                action = resp.get("action_category", action)
+                resolution = resp.get("resolution_comments", resolution)
             except Exception as e:
+                print(f"Call to LLM failed for case {rec.case_id}: {e}")
                 # fallback only heuristics
                 resolution = resolution or "See case notes"
         
