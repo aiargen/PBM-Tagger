@@ -2,6 +2,9 @@
 import streamlit as st
 import pandas as pd
 from pbm.pipeline import process_dataframe
+from dotenv import load_dotenv
+load_dotenv()
+
 
 st.set_page_config(page_title="PBM Tag Generator", layout="centered")
 
