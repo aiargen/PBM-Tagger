@@ -1,0 +1,15 @@
+# run.py
+import pandas as pd
+from pbm.pipeline import process_dataframe
+
+INPUT_PATH = "data/cases_input.xlsx"
+OUTPUT_PATH = "data/cases_output_with_pbm.xlsx"
+
+def main():
+    df = pd.read_excel(INPUT_PATH)
+    df_out = process_dataframe(df, use_llm=True)  # set False for rule-only
+    df_out.to_excel(OUTPUT_PATH, index=False)
+    print(f"Saved: {OUTPUT_PATH}")
+
+if __name__ == "__main__":
+    main()
