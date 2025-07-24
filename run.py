@@ -1,6 +1,7 @@
 # run.py
 import pandas as pd
 from pbm.pipeline import process_dataframe
+from dotenv import load_dotenv; load_dotenv()
 
 INPUT_PATH = "data/cases_input.xlsx"
 OUTPUT_PATH = "data/cases_output_with_pbm.xlsx"
