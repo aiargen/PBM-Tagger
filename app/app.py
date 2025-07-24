@@ -1,6 +1,9 @@
 # app/app.py
 import streamlit as st
 import pandas as pd
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from pbm.pipeline import process_dataframe
 from dotenv import load_dotenv
 load_dotenv()
@@ -11,10 +14,11 @@ st.set_page_config(page_title="PBM Tag Generator", layout="centered")
 st.title("📌 PBM Tag Generator")
 st.markdown("Upload your case summary Excel file to auto-generate PBM tags.")
 
-uploaded_file = st.file_uploader("Upload Excel (.xlsx) File", type=["xlsx"])
+uploaded_file = st.file_uploader("Upload Excel (.xlsx) File", type=["xls"])
 
 if uploaded_file is not None:
-    df = pd.read_excel(uploaded_file)
+    df = pd.read_html(uploaded_file)
+    df = df[0]
     st.success("File uploaded successfully!")
 
     if st.button("🔍 Generate PBM Tags"):
