@@ -5,7 +5,7 @@ from dotenv import load_dotenv;
 
 load_dotenv()
 
-INPUT_PATH = "data/input_data.xlsx"
+INPUT_PATH = "data/input_data.xls"
 OUTPUT_PATH = "data/cases_output_with_pbm.xlsx"
 
 def main():
