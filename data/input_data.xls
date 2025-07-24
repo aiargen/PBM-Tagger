@@ -1,0 +1,522 @@
+<head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><table><tr><th filter=all>Case Number</th><th filter=all>Subject</th><th filter=all>Description</th><th filter=all>Case Summary</th></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02008416</td><td style="vnd.ms-excel.numberformat:@">BMC Digital Workplace 22.1.06 - &quot;On behalf of&quot; issue</td><td>Hello,
+
+We are facing an issue regarding the &quot;Request on behalf of&quot; functionality in DWP and we want to understand why this is happening and how can it be corrected.
+
+Right after submitting the Service Request on behalf of a user from another company than the one making the request it immediately goes into &quot;Failed&quot; status, mentioning the error &quot;Contact should be type of Customer or Employee.&quot; We have already checked from Workflow side, all the blocks and variables seems to be in order.
+
+We have attached the filter and process logs (in the same file) and DWPC logs for better clarity regarding what is happening.
+
+Please look into it and let us know what can be done to solve this.</td><td>Problem: BMC Digital Workplace 22.1.06 - &quot;On behalf of&quot; issue
+
+3WE
+What: BMC Digital Workplace 22.1.06 - &quot;On behalf of&quot; issue
+Where: DWP version 22.1.06
+When: Issue reported on 07/07
+Extent: Functionality 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+- Solution provided in bookmarked mail
+- Customer provided closure 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02008401</td><td style="vnd.ms-excel.numberformat:@">Ticket status issue</td><td>Dear,
+
+We have one of our VIP users that is claiming that some of his tickets are still on pending (see attachment) on his  Remedy profile while those tickets are closed on Service Desk side.
+
+Could you please check why those tickets are not on status solved/closed on his profile?</td><td>Problem: Requests in DWP/DWPC are active even if the associated incidents are close in SmartIT/ITSM
+
+3WE
+What: Requests in DWP/DWPC are active even if the associated incidents are close in SmartIT/ITSM
+Where: Prod - DWP version 23.3.03 | build number: 5
+When: Issue reported on 07/07
+Extent: Requests with INC template &quot;Cebi Incident Template&quot; and submitted by user &quot;Paul Elvinger&quot;
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+08/07:
+1. Request 25455, 24824, 24825, 23904 are in active status even if their associated incidents INC000000016452, INC000000015931, INC000000015932, INC000000015414 are ckosed in ITSM/SmartIT.
+2. All the above service requests are using template &quot;Cebi Incident Template&quot; to create incident and are submitted by Paul Elvinger this is common in all the affecetd requests.
+3. Tried replicating the issue in QA env, strange behaviour observed.
+
+09/07:
+1. Closed the requests over a call
+2. Customer provided closure 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02008425</td><td style="vnd.ms-excel.numberformat:@">Unable to edit Server Service Questionary in DEV</td><td>Dear Team,
+
+We are Unable to edit Server Service Questionary in DEV. Please find the attached error screenshot.</td><td>Problem: Unable to edit questionnaire
+
+3WE
+What: Customer has a questionnaire &quot;Server&quot;, whenever end user tries to edit the questionnaire we get an error Error retrieving workflow questionnaire information
+Where: Dev - DWP version 25.2.00 | build number: 35
+When: Issue reported on 07/07
+Extent: One service affected.
+
+Steps to replicate:
+1. Login to DWPC -&gt; Services -&gt; Services
+2. Open service &quot;Server&quot; -&gt; Edit -&gt; Workflow
+3. Click in Edit questionnaire, error message will pop up
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+07/07:
+1. R&amp;D discussion with logs and analysis: https://teams.microsoft.com/l/message/19:155e65c3543c4f79bfc3089446a57a88@thread.tacv2/1751895614573?tenantId=92b796c5-5839-40a6-8dd9-c1fad320c69b&amp;groupId=9f8be3aa-9422-4aaf-a8d3-93bc59b4d469&amp;parentMessageId=1751895614573&amp;teamName=DWP-Backline%20Support&amp;channelName=General&amp;createdTime=1751895614573
+2. Issue got resolved after removing input variable with the &quot;Record&quot; type from the workflow of this service
+
+10/07:
+1. Customer provided closure 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02008565</td><td style="vnd.ms-excel.numberformat:@">Digital Workplace Catalog permissions</td><td>Hello,
+we need the following users to have administrator permissions for Digital Workplace Catalog:
+
+- DEV env:
+CHLE0
+TULU0
+ALRA0
+CAPA0
+VIAL0
+POAN0
+
+- QA env
+CHLE0
+TULU0
+ALRA0
+CAPA0
+VIAL0
+POAN0
+
+- PRD env
+CHLE0
+TULU0
+ALRA0
+
+Thanks
+best regards</td><td>Problem: Digital Workplace Catalog permissions\
+
+3WE
+What: Digital Workplace Catalog permissions
+Where: DWP version 
+When: issue reported on 07/07
+Extent: Few users
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+&gt;&gt; Shared the steps 
+&gt;&gt; Customer provided closure 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02009315</td><td style="vnd.ms-excel.numberformat:@">Automating creation of user accounts in Helix ITSM vs. DWP</td><td>I have an outstanding recommendation from the Vodafone Security Team to implement automatic user creation in VNIPM from Active Directory data held in an internal Vodafone User Access Management (UAM / WIAM) for all members of the Vodafone Network Operations division.  All users would require a basic level of access with Read-Only permissions and Incident Submit.  We would like these users to be able to access both Classic Mid-Tier UI and SmartIT (which has previously caused us issues due to some customizations).
+
+However, I now have a related requirement to be able to give all users access to only VNIPM DWP regardless of whether they already have a VNIPM Helix ITSM account or not.
+
+Questions:
+
+1. Is it possible to give users access to DWP only?
+
+2. Is it possible to automate this from an external source?  I.e. to be driven by the external source via an API.</td><td>Problem: 
+
+3WE
+What: 
+Where: 
+When: 
+Extent: 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+----------------------------------------------------------------------------------------------------
+Action Plan: 
+----------------------------------------------------------------------------------------------------
+Action Owner:</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02009298</td><td style="vnd.ms-excel.numberformat:@">Issue while raising DWP Service Request from Chatbot/HelixGPT</td><td>Outlook Access Request is published in HelixGPT. 
+
+Customer&#39;s requirement is that they want the Date in DD/MM/YYYY Format.
+
+However, after changing the prompt to accept the Date in DD/MM/YYYY format, the Service Request creation fails.
+
+The reason is that DWP always accepts the Date in MM/DD/YYYY format.
+
+NOTE: When we look at the Service, the Customer is seeing the Date in DD/MM/YYYY format, while when checking from the BMC end, It shows in MM/DD/YYYY
+
+Kindly help check with the DWP R&amp;D if this is expected behavior, as the Date format in the question seems to be changing depending on the Country/Region and is not consistent.
+
+If required, kindly engage the HelixGPT Team as well.</td><td>Problem: Issue while raising DWP Service Request from Chatbot/HelixGPT
+
+3WE
+What: Issue while raising DWP Service Request from Chatbot/HelixGPT
+Where: HelixGPT Manager
+When: When submitting DWP request from HelixGPT
+Extent: Issue with date format
+----------------------------------------------------------------------------------------------------
+Action Taken: 9th July: Initiated backline chat: 
+
+https://teams.microsoft.com/l/message/19:155e65c3543c4f79bfc3089446a57a88@thread.tacv2/1752075455846?tenantId=92b796c5-5839-40a6-8dd9-c1fad320c69b&amp;groupId=9f8be3aa-9422-4aaf-a8d3-93bc59b4d469&amp;parentMessageId=1752075455846&amp;teamName=DWP-Backline%20Support&amp;channelName=General&amp;createdTime=1752075455846
+
+10th July: Updated date format in COPS to Updated the Date format to DD/MM/YYYY HH:MM:SS (24-hour) in COPS as advised by Sumeet Das however issue still persists.
+
+Based on discussion with R&amp;D, reached out to Kalpana on Teams asking if we can get on a call. She advised to get in touch with VijayKumar Rodge.
+
+11th July: Got on a call with VijayKumar Rodge to understand the issue as follows:
+
+Customer has an SR called Outlook Access that has a question field called &quot;AccessDate&quot; which is in mm/dd/yyyy however this date format depends on the system settings.
+In HelixGPT Manager they have modified a prompt for v2 (Active) where the date format should be DD/MM/YYYY however when they submit the request using HelixGPT, it fails with error: Your request is submitted and processed. Here&#39;s the status: COMPLETED result: Error.
+
+The date conversion is not working. Customer should see it in DD/MM/YYYY format. The one that is going in payload is yyyy/dd/mm
+
+Updated the Date format to DD/MM/YYYY HH:MM:SS (24-hour) in COPS as advised by Sumeet Das.
+Customer has tried changing the prompt in IS&gt;&gt;HelixGPT Manager&gt;&gt;For v2 )Active). Earlier it was yyyy/dd/mm which is what is getting pulled in Network Paylod (Dev tools)
+
+Took screenshots of the issue and escalated to R&amp;D.
+
+14/07:
+1. Customer and R&amp;D call: https://bmcsoftware-my.sharepoint.com/:v:/g/personal/achabuks_bmc_com/EXegH6poI0xMhZh-TaNGRAEBYbPKkeVZZXLdfcBueJRaWA?e=cH1dH4&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+----------------------------------------------------------------------------------------------------
+Action Plan: Need to schedule an internal call with VijayKumar Rodge , Aparna Nevase, Rajni Patil and DWP R&amp;D to check if the issue can be fixed
+----------------------------------------------------------------------------------------------------
+Action Owner: DWP Engineering</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02009757</td><td style="vnd.ms-excel.numberformat:@">DWP requests can&#39;t be cancelled</td><td>Hi Support,
+
+I&#39;ve created an entry using DWP for the Incident Management backend. The submission is OK but then I&#39;ve tried to cancel the request by clicking &quot;cancel&quot;. This operation never gets completed as the message &quot;the action is taking longer than expected but eventually will get completed&quot; appears. If&#39;ve waited for more than 5 mins and neither the backend entry nor the frontend reflects the change, even when clicking again in CANCEL. See screenshots for details.
+Please, review.
+
+Vanessa</td><td>Problem: 
+
+3WE
+What: 
+Where: 
+When: 
+Extent: 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+----------------------------------------------------------------------------------------------------
+Action Plan: 
+----------------------------------------------------------------------------------------------------
+Action Owner:</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02009756</td><td style="vnd.ms-excel.numberformat:@">DWP Service issue</td><td>Hello BMC,
+We are facing the following problem, that is happening only in our client?s DEV environment. The attached DWP Service called ?Nuova Change Request? has a very simple workflow:
+?	Approval to a specific user;
+?	Change Request creation.
+Once submitted, the DWP request immediately reaches the ?In Progress? state instead of the ?Approval? state. After a lot of time (more or less 20 minutes), the approver sees the request in his DWP.
+
+(see attachment 1)
+
+ If he tries to approve, nothing changes. More precisely:
+?	We cannot find the DWP request in Helix ITSM;
+?	We do not see any Change Request getting created;
+?	System is not throwing any error.
+
+(see attachment 2)
+
+We expect instead that the request stays on ?Approval? state and after the approval of the user, we expect the Change to be created (this is correctly happening in another instance of another client).
+For any answer, please involve also patrick.caprioli@alten.it, alessandro.vitagliano@alten.it and andrea.polverino@alten.it .
+
+Many thanks in advance.</td><td>Problem: Delay of status transmission of request
+
+3WE
+What: Delay of status transmission of request
+Where: Dev - DWP version 25.1.01 and Build number 11
+When: Issue reported on 09
+Extent: Performance
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+&gt;&gt; Collected apifiltersql, myit-sb logs for request 13 and CRQ000000000616
+&gt;&gt; R&amp;D escalation: https://jira.bmc.com/browse/DRIIT-79715
+&gt;&gt; Pod restart resolved the issue 
+&gt;&gt; Customer provided closure 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02009770</td><td style="vnd.ms-excel.numberformat:@">Migrating SRM:Request to myit_sb:Servicerequest for Helix Dashboard reports</td><td>Dear Team,
+
+I am migrating reports from Smart Reporting to BMC Helix Dashboards.
+
+Now, I have some &quot;old&quot; SRM Reports to migrating . I know SRM:Request and myit-sb:Servicerequest are different forms but they are dealing with similar data.
+
+For Example, Here is the SQL request from SR :
+
+SELECT DISTINCT
+   YEAR(`SRM:Request`.`Completion Date`) AS C1,
+   `SRM:Request`.`Status` AS C2,
+   `SRD:ServiceRequestDefinition`.`SRD_Title` AS C3,
+   COUNT(DISTINCT(`SRM:Request`.`Request Number`))
+FROM `AR System Schema`.`SRM:Request`
+LEFT OUTER JOIN `AR System Schema`.`SRD:MultipleQuestionResponse`
+ON (
+   `SRM:Request`.`InstanceId` = `SRD:MultipleQuestionResponse`.`SRInstanceID`
+)
+LEFT OUTER JOIN `AR System Schema`.`SRD:ServiceRequestDefinition`
+ON (
+   `SRM:Request`.`SRDInstanceID` = `SRD:ServiceRequestDefinition`.`InstanceId`
+)
+WHERE (
+   `SRD:ServiceRequestDefinition`.`SRD_Title` IN (&#39;Administration et aide sur la plateforme ITSM (hors incidents)&#39;, &#39;Amélioration des processus et services&#39;, &#39;Choix de l&#39;&#39;outil pour une nouvelle visualisation OCSIN&#39;, &#39;Évolution Outillage Processus pour la Gestion Opérationnelle de Services&#39;, &#39;Création, modification ou désactivation de Groupes de support dans ITSM&#39;, &#39;Correction du référentiel ITSM - CMDS&#39;)
+   AND `SRM:Request`.`Category 2` IS NOT NULL
+   AND `SRD:MultipleQuestionResponse`.`Answer In Char` LIKE &#39;%incident%&#39;
+   AND (
+      `SRM:Request`.`Completion Date` BETWEEN &#39;01/01/2025 12:00:00 AM&#39; AND &#39;07/09/2025 08:59:30 AM&#39;
+      OR `SRM:Request`.`Completion Date` BETWEEN &#39;01/01/2024 12:00:00 AM&#39; AND &#39;12/31/2024 11:59:59 PM&#39;
+      OR `SRM:Request`.`Completion Date` IS NULL
+   )
+)
+GROUP BY 
+   YEAR(`SRM:Request`.`Completion Date`),
+   `SRD:ServiceRequestDefinition`.`SRD_Title`,
+   `SRM:Request`.`Status`
+
+
+According to this idea, : https://community.bmc.com/s/idea/0873n000000TlIHAA0/detail, the &quot;Completed date&quot; is not added yet on myit-sb:ServiceRequest. Is there an alternative to get it in another myit-sb forms, please?
+
+It is the same problem with SRD_Title. I may have found a way by using the &quot;processname&quot; columns on myit-sb:ServiceRequest but is there a simpler way to select it, please?
+
+Thank you for your help in advance.
+
+I am sorry but I don&#39;t know whether I  selected the right component for this ticket.
+
+Regards,
+Charles</td><td>Problem: According to this idea, : https://community.bmc.com/s/idea/0873n000000TlIHAA0/detail, the &quot;Completed date&quot; is not added yet on myit-sb:ServiceRequest. And the customer would like to confirm if there is an alternative to get completed date from another myit-sb forms.
+
+3WE
+What: According to this idea, : https://community.bmc.com/s/idea/0873n000000TlIHAA0/detail, the &quot;Completed date&quot; is not added yet on myit-sb:ServiceRequest. And the customer would like to confirm if there is an alternative to get completed date from another myit-sb forms.
+Where: PROD
+When: Trying to migrate service requests from SRM to DWPC.
+Extent: 
+----------------------------------------------------------------------------------------------------
+Action Taken: Customer has migrated the service requests from SRM to DWPC
+According to this idea, : https://community.bmc.com/s/idea/0873n000000TlIHAA0/detail, the &quot;Completed date&quot; is not added yet on myit-sb:ServiceRequest. 
+And they would like to confirm if there is an alternative to get completed date from another myit-sb forms.
+It is the same problem with SRD_Title. They have found a way by using the &quot;processname&quot; columns on myit-sb:ServiceRequest but would like to confirm if there a simpler way to select it?
+
+09/07:
+1. R&amp;D discussion: https://teams.microsoft.com/l/message/19:155e65c3543c4f79bfc3089446a57a88@thread.tacv2/1752069372840?tenantId=92b796c5-5839-40a6-8dd9-c1fad320c69b&amp;groupId=9f8be3aa-9422-4aaf-a8d3-93bc59b4d469&amp;parentMessageId=1752069372840&amp;teamName=DWP-Backline%20Support&amp;channelName=General&amp;createdTime=1752069372840
+
+11/07:
+1 Customer provided closure
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: BMC</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02009785</td><td style="vnd.ms-excel.numberformat:@">Need help with data decryption on DWPC Service</td><td>Hi Team,
+
+Good Day...!
+
+We are working on DWPC Service where we have credentials.
+
+Can you please let me know if there is capability where we can encrypt and decrypt credentials to maintain confidentiality of credentials.
+
+
+Thanks,
+Bhavesh</td><td>Problem: Data decryption on DWPC Service
+
+3WE
+What: Data decryption on DWPC Service
+Where: DWP version 25.1.01
+When: Generla query 
+Extent: Generla query 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+&gt;&gt; R&amp;D: https://teams.microsoft.com/l/message/19:155e65c3543c4f79bfc3089446a57a88@thread.tacv2/1752228847216?tenantId=92b796c5-5839-40a6-8dd9-c1fad320c69b&amp;groupId=9f8be3aa-9422-4aaf-a8d3-93bc59b4d469&amp;parentMessageId=1752228847216&amp;teamName=DWP-Backline%20Support&amp;channelName=General&amp;createdTime=1752228847216
+&gt;&gt; do not think we provide such capabilities OOTB. However, customer can make it using InnovationStudio capabilities (custom app) or delegate it to 3rd party app, or anything like that
+&gt;&gt; Customer provided closure 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02009806</td><td style="vnd.ms-excel.numberformat:@">NEOM: Disable the DWP OOTB notification &#39;Waiting approval&#39; for approver</td><td>Please, we need to disable the DWP OOTB notification on &quot;Waiting approval&quot; for all logged-on users by applying the query on the DB level as mentioned in the below article (see the attached file).
+
+https://community.bmc.com/s/article/DWP-How-to-bulk-enable-all-the-DWP-notifications-for-all-user-profiles
+
+&quot;
+Please note that you can refer to case number 01691003.</td><td>Problem: 
+
+3WE
+What: 
+Where: 
+When: 
+Extent: 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+----------------------------------------------------------------------------------------------------
+Action Plan: 
+----------------------------------------------------------------------------------------------------
+Action Owner:</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02009947</td><td style="vnd.ms-excel.numberformat:@">Increase Autoclose DWP Request</td><td>Hello team, in this case, 01972804   , we requested to BMC to increase this value, (OOTB is 2 months).
+
+The BMC team, advised us that an upgrade will change this value. Can you increase to 1 year again?</td><td>Problem: Increase Autoclose DWP Request
+
+3WE
+What: Increase Autoclose DWP Request
+Where: DWP version 23.3.04
+When: Query 
+Extent: Query 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+&gt;&gt; Refer to the bookmarked mail for solution 
+&gt;&gt; Customer provided closure 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+-------------------------------- --------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02010404</td><td style="vnd.ms-excel.numberformat:@">Sync the Service Request Status to Closed</td><td>1, Please update the status of the listed Service Requests (SRs) 3337823, 3382522, 3391128 to &quot;Closed.&quot;
+2, Investigate why these SRs remain in &quot;Active&quot; status despite all related Work Orders (WOs) and fulfillments being marked as completed/Closed in Smart IT.
+Please reach me out at 7569537548.</td><td>Problem: Sync the Service Request Status to Closed
+
+3WE
+What:  Please update the status of the listed Service Requests (SRs) 3337823, 3382522, 3391128 to &quot;Closed.&quot;
+Where: Prod
+When: Happened in past 
+Extent: 3 requests affected 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+&gt;&gt; Closed from backend
+&gt;&gt; 3 follow ups done 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02010514</td><td style="vnd.ms-excel.numberformat:@">Please setup enhanced catalog for sub tenant Tiger Brand Limited on Prod</td><td>Please setup enhanced catalog for sub tenant Tiger Brand Limited on Prod, this has already been done in the lower environments.</td><td>Problem: DWP Catalog section Error
+
+3WE
+What: Alert pops up when we go from DWPA -&gt; Service Requests -&gt; Catalog sections.
+Where: Prod - DWP version 25.1.02 | build number: 4
+When: Post enhanced catalog configuration
+Extent: DWP Admin console
+
+Steps to replicate: 
+1. Login to DWP Admin -&gt; Service Requests -&gt; Catalog sectons
+2. One alert message will pop up saying &quot;Server Encountered Error&quot;
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+&gt;&gt; R&amp;D discussion with logs and analysis: https://teams.microsoft.com/l/message/19:155e65c3543c4f79bfc3089446a57a88@thread.tacv2/1752221912807?tenantId=92b796c5-5839-40a6-8dd9-c1fad320c69b&amp;groupId=9f8be3aa-9422-4aaf-a8d3-93bc59b4d469&amp;parentMessageId=1752221912807&amp;teamName=DWP-Backline%20Support&amp;channelName=General&amp;createdTime=1752221912807
+&gt;&gt; Customer provided closure 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02010532</td><td style="vnd.ms-excel.numberformat:@">Log for DWPC deactivating Service Action needed</td><td>Hi team,
+today in the morning we saw that the Service Action &quot;Install Software&quot; in DWPC was deactivated for some reason unknown.
+Noone in our team has a clue why this was changed and who did it.
+
+Is there any background log which might be able to have catched this information?
+
+Obviously, we re-activated the Service Action as soon as we saw it deactivated, so this is to consider.
+
+Please investigate,
+
+thx in advance</td><td>Problem: Log for DWPC deactivating Service Action needed
+
+3WE
+What: Log for DWPC deactivating Service Action needed
+Where: DWP version 23.3.04
+When: Issue happened in past 
+Extent: Issue happened in past 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+&gt;&gt; https://teams.microsoft.com/l/message/19:155e65c3543c4f79bfc3089446a57a88@thread.tacv2/1752153870505?tenantId=92b796c5-5839-40a6-8dd9-c1fad320c69b&amp;groupId=9f8be3aa-9422-4aaf-a8d3-93bc59b4d469&amp;parentMessageId=1752153870505&amp;teamName=DWP-Backline%20Support&amp;channelName=General&amp;createdTime=1752153870505
+&gt;&gt; Maybe, this service action is mapped to service that was unpublished?
+&gt;&gt; 3 follow ups 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closong the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02010622</td><td style="vnd.ms-excel.numberformat:@">Change the Status to Completed</td><td>Dear Team,
+
+Requesting your support to mark the Request ID status to completed.
+
+Request ID - 710688
+
+Attached screenshot for your ref</td><td>Problem: Change the Status to Completed
+
+3WE
+What: Change the Status to Completed
+Where: Prod - DWP version 23.3.02
+When: Issue repported on 10/07
+Extent: 1 SR
+----------------------------------------------------------------------------------------------------
+Action Taken:
+&gt;&gt; Closed from backend
+&gt;&gt; Customer provided closure  
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02010722</td><td style="vnd.ms-excel.numberformat:@">Users display a deleted broadcast</td><td>Hello support team,
+
+Today we created a diffusion by customer request, after a few hours the customer requested to remove it.
+
+Therefore we removed it, however it still appears in the DWP portal.
+
+We request to remove it, as it is possible that it is not synchronized at some point.
+
+Greetings,
+Iván Hernández</td><td>Problem: 
+
+3WE
+What: 
+Where: 
+When: 
+Extent: 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+----------------------------------------------------------------------------------------------------
+Action Plan: 
+----------------------------------------------------------------------------------------------------
+Action Owner:</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02011223</td><td style="vnd.ms-excel.numberformat:@">About the error received by users trying to access DWP</td><td>Hello, we are using reCAPTCHA v3. We are encountering the attached error when trying to log in to the Digital Workplace. Sometimes users receive the error twice before successfully logging in, sometimes they log in on the first attempt, and occasionally it takes four errors before they can log in. Do you have any suggestions for resolving this issue?</td><td>Problem: 
+
+3WE
+What: 
+Where: 
+When: 
+Extent: 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+----------------------------------------------------------------------------------------------------
+Action Plan: 
+----------------------------------------------------------------------------------------------------
+Action Owner:</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02011290</td><td style="vnd.ms-excel.numberformat:@">Comments on DWP showing username</td><td>We have a question regarding the comments for interactions on DWP.
+
+As shown in the screenshot, users create certain comments on DWP interactions. We want to know whether it´s possible that, instead of showing the user´s username that created it, maybe we could show the Default Support Group name to which they are assigned, or some other general field, instead of the name (we want to keep it private).
+
+Is this possible? If so, how can we change it?
+
+Thank you.</td><td>Problem: Comments on DWP showing username
+
+3WE
+What: Comments on DWP showing username
+Where: nexus-sand
+When: General query
+Extent:  General query
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+R&amp;D: https://teams.microsoft.com/l/message/19:155e65c3543c4f79bfc3089446a57a88@thread.tacv2/1752235373300?tenantId=92b796c5-5839-40a6-8dd9-c1fad320c69b&amp;groupId=9f8be3aa-9422-4aaf-a8d3-93bc59b4d469&amp;parentMessageId=1752235373300&amp;teamName=DWP-Backline%20Support&amp;channelName=General&amp;createdTime=1752235373300
+&gt;&gt; Not possible
+&gt;&gt; Customer provided closure 
+----------------------------------------------------------------------------------------------------
+Action Plan: Closing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+<tr><td style="vnd.ms-excel.numberformat:@">02011555</td><td style="vnd.ms-excel.numberformat:@">For helixdemoash2481-demo-is.onbmc.com: When I go to enable services in chatbot in the dwpc the page errors out no matter what helix user or browser</td><td>For helixdemoash2481-demo-is.onbmc.com: When I go to enable services in chatbot in the dwpc the page errors out no matter what helix user or browser</td><td>Problem: Enable in Chatbot in DWPC not loading
+
+3WE
+What: Enable in Chatbot in DWPC not loading
+Where: DWP version 25.2.02
+When: Issue reported on 11/07
+Extent: DWPC services in chatbot 
+----------------------------------------------------------------------------------------------------
+Action Taken: 
+&gt;&gt; https://teams.microsoft.com/l/message/19:155e65c3543c4f79bfc3089446a57a88@thread.tacv2/1752676147954?tenantId=92b796c5-5839-40a6-8dd9-c1fad320c69b&amp;groupId=9f8be3aa-9422-4aaf-a8d3-93bc59b4d469&amp;parentMessageId=1752676147954&amp;teamName=DWP-Backline%20Support&amp;channelName=General&amp;createdTime=1752676147954
+&gt;&gt; Added url in IS 
+&gt;&gt; Provided closure 
+----------------------------------------------------------------------------------------------------
+Action Plan: CLosing the case 
+----------------------------------------------------------------------------------------------------
+Action Owner: TSA for closure</td></tr>
+</table>
