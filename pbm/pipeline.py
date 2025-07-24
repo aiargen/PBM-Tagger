@@ -71,14 +71,13 @@ def process_dataframe(df: pd.DataFrame, chain=None, use_llm=True) -> pd.DataFram
                     "description": rec.description,
                     "summary": rec.clean_summary,
                 })
-                # resp is PBMClassification object or dict
-                prod = resp.get("product", prod)
-                issue = resp.get("issue_category", issue)
-                action = resp.get("action_category", action)
-                resolution = resp.get("resolution_comments", resolution)
+                # resp is PBMClassification object
+                prod = getattr(resp, "product", prod) or prod
+                issue = getattr(resp, "issue_category", issue) or issue
+                action = getattr(resp, "action_category", action) or action
+                resolution = getattr(resp, "resolution_comments", resolution) or resolution
             except Exception as e:
                 print(f"Call to LLM failed for case {rec.case_id}: {e}")
-                # fallback only heuristics
                 resolution = resolution or "See case notes"
         
         # derive resolution if still missing: short trimmed summary
