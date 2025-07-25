@@ -8,8 +8,11 @@ from pbm.pipeline import process_dataframe
 from dotenv import load_dotenv
 load_dotenv()
 
+# Load custom CSS
+with open("app/style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.set_page_config(page_title="PBM Tag Generator", layout="centered")
+st.set_page_config(page_title="PBM Tag Generator", layout="wide")
 
 st.title("📌 PBM Tag Generator")
 st.markdown("Upload your case summary Excel file to auto-generate PBM tags.")
@@ -26,7 +29,7 @@ if uploaded_file is not None:
             df_out = process_dataframe(df, use_llm=True)
         
         st.success("✅ PBM Tags Generated!")
-        st.dataframe(df_out.head(10), use_container_width=True)
+        st.dataframe(df_out.head(5), use_container_width=True)
 
         # Prepare download
         st.markdown("### 📥 Download Output")
@@ -37,3 +40,5 @@ if uploaded_file is not None:
 
 else:
     st.info("Awaiting Excel file upload.")
+
+
