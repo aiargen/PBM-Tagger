@@ -40,6 +40,22 @@ def build_pbm_tag(product, issue, resolution, action):
 def process_dataframe(df: pd.DataFrame, chain=None, use_llm=True) -> pd.DataFrame:
     if chain is None and use_llm:
         chain = build_pbm_chain()
+
+    # Print LLM model info if using LLM
+    if use_llm:
+        llm_model_name = None
+        try:
+            # The chain is a RunnableSequence: steps = [prompt, llm, parser]
+            llm = chain.steps[1]  # 0=prompt, 1=llm, 2=parser
+            if hasattr(llm, 'model'):
+                llm_model_name = getattr(llm, 'model', None)
+            elif hasattr(llm, 'model_name'):
+                llm_model_name = getattr(llm, 'model_name', None)
+            else:
+                llm_model_name = str(type(llm))
+        except Exception as e:
+            llm_model_name = f"Unknown (error: {e})"
+        print(f"Using LLM model: {llm_model_name}")
     
     results = []
     for _, row in df.iterrows():

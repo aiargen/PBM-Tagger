@@ -5,6 +5,7 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.output_parsers import OutputFixingParser, PydanticOutputParser
 from langchain_openai import ChatOpenAI
 from .vocab import PRODUCTS, ISSUE_CATEGORIES, ACTION_CATEGORIES
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 
 # 6.1 Output Schema
@@ -45,7 +46,8 @@ Return a JSON object in this format:
 # 6.3 Chain Builder
 def build_pbm_chain(llm=None):
     if llm is None:
-        llm = ChatOpenAI(model="gpt-4o", temperature=0)
+        # llm = ChatOpenAI(model="gpt-4o", temperature=0)
+        llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
 
     # Output parser with auto-fix for formatting issues
     base_parser = PydanticOutputParser(pydantic_object=PBMClassification)

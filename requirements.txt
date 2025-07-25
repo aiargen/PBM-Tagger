@@ -6,4 +6,6 @@ langchain-core
 langchain-openai
 python-dotenv
 pydantic
+streamlit
+langchain-google-genai
 
