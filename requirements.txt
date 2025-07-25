@@ -8,4 +8,5 @@ python-dotenv
 pydantic
 streamlit
 langchain-google-genai
+lxml
 
